@@ -1,0 +1,22 @@
+{% extends 'joinwithmeapp/main.html' %}
+
+{% block content %}
+{% load static %}
+<style>
+
+a:hover{
+text-decoration:none;
+opacity:0.5;
+}
+</style>
+<div style="">
+    <div style="align-items: center; justify-content: center; padding-left:46%; padding-top:5%; padding-bottom:5%; height:25%; font-size:20px;">
+        <a href="{%url 'startup_form'%}" style=" color:#006400;">STARTUP SEEKERS</a> </div><hr>
+    <div style="align-items: center; justify-content: center; padding-left:47%; padding-top:5%; padding-bottom:5%; height:25%; font-size:20px;">
+        <a href="{%url 'investor_form'%}" style=" color:#f0e130;">INVESTORS</a> </div><hr>
+    <div style="align-items:center; justify-content:center; padding-left:48%; padding-top:5%; padding-bottom:5%; height:25%; font-size:20px;">
+        <a href="{%url 'member_form'%}" style=" color:#003153;">MEMBER</a> </div>
+</div>
+
+{% endblock %}
+

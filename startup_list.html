@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <style>
+        p{
+        padding:5px;
+        }
+        .name{
+        margin-top:100px;
+        text-align:center;
+        font-size:23px;
+        }
+        a{
+        color:black;
+        text-decoration:none;
+        }
+        a:hover{
+        color:black;
+        text-decoration:none;
+        }
+
+    </style>
+</head>
+<body>
+<nav style="text-align:center; z-index:1">
+    <img id="navimg" src="{% static 'images/join.png' %}">
+    <span><a href="{% url 'logout' %}"><button class="btn btn-sm btn-dark">Logout</button></a></span>
+</nav>
+<div class="contain" style="text-align:center; margin-top:50px;font-size:30px; background:black; color:white;">
+    <p>Joinwithme.startup  StartupSeekers  List</p>
+</div>
+<div class="container" style="color:black;">
+    <div class="name">
+        {% for i in startupseekers %}
+        <a href="#">{{ i.Name }}</a><hr>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
